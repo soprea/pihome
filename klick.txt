@@ -1,0 +1,12 @@
+klick 11 on A 00000
+klick 10 off A 00000
+klick 10 on A 00000
+klick 10 off A 00000
+klick 12 on A pin11
+klick 12 off A pin11
+klick 12 on A pin11
+klick 12 off A pin11
+klick 12 on A pin11
+klick 12 off A pin11
+klick on pin11
+klick offpin11
