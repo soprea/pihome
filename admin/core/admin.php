@@ -67,8 +67,8 @@
 			<br><br>
 			Type:<br>
 			<select name="type">
-				<option value="light">light</option>
-				<option value="temp">temp</option>
+				<option value="switch">switch</option>
+				<option value="sensor">sensor</option>
 			</select>
 			<br><br>
 			Code:<br>

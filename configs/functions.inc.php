@@ -55,7 +55,7 @@ function getLights(){
 //        dbconnect();
 function getLightsByRoomID(){
         dbconnect();
-        $sql_getLights       = "SELECT * FROM  pi_devices  WHERE room_id = '1' ORDER BY sort DESC ";
+        $sql_getLights       = "SELECT * FROM  pi_devices  WHERE room_id = '2' ORDER BY sort DESC ";
         $query_getLights     = mysql_query($sql_getLights);
         $x=0;
         while($light = mysql_fetch_assoc($query_getLights)){

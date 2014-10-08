@@ -11,10 +11,10 @@ $lp=getLights();
 for($i=0;$i<count($lp);$i++){
 if($lp[$i]["status"]=="0"){ $lampimg = "lamp_off.png"; $btn1 = "on_off.png"; $btn2 = "off_on.png"; }
 elseif($lp[$i]["status"]=="1"){ $lampimg = "lamp_on.png"; $btn1 = "on_on.png"; $btn2 = "off_off.png"; }
-if($lp[$i]["type"]=="light"){
+if($lp[$i]["type"]=="switch"){
 ?>	
 	<li>
-		<div class="light">
+		<div class="switch">
 			<div class="lamp"><img src="images/<?=$lampimg;?>" border="0" id="lamp_<?=$lp[$i]["id"];?>"></div>
 			<div class="name"><div class="device"><?=utf8_encode($lp[$i]["device"]);?></div><div class="room"><?=utf8_encode(getRoomById($lp[$i]["room_id"]));?></div></div>
 			<div class="btn">
@@ -25,15 +25,15 @@ if($lp[$i]["type"]=="light"){
 <?
 	}
 
-elseif($lp[$i]["type"]=="temp"){
-  $temp = $lp[$i]["status"];
-  if ($temp[0] == "-"){$tempimg = "cold.png";}elseif ($temp[0] !== "-"){$tempimg = "hot.png";}
+elseif($lp[$i]["type"]=="sensor"){
+  $sensor = $lp[$i]["status"];
+  if ($sensor[0] == "-"){$sensorimg = "cold.png";}elseif ($sensor[0] !== "-"){$sensorimg = "hot.png";}
      ?>      
        <li>
-          <div class="light">
-            <div class="lamp"><img src="images/<?=$tempimg?>" border="0" id="lamp_<?=$lp[$i]["id"];?>"></div>
+          <div class="switch">
+            <div class="lamp"><img src="images/<?=$sensorimg?>" border="0" id="lamp_<?=$lp[$i]["id"];?>"></div>
             <div class="name"><div class="device"><?=utf8_encode($lp[$i]["device"]);?></div><div class="room"><?=utf8_encode(getRoomById($lp[$i]["room_id"]));?></div></div>
-            <div class="btn"><?=$temp;?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <div class="btn"><?=$sensor;?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
           </div>
        </li>
 <?
